@@ -1,0 +1,169 @@
+@use 'variables.scss' as *;
+
+.brand-list {
+  margin-top: 24px;
+  color: $text-add-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  border-top: 1px solid $add-color-border;
+  background-color: $main-color;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 50px;
+  }
+  &__swiper {
+    display: flex;
+    height: auto;
+    margin: 0;
+    background-color: $main-color;
+    overflow: hidden;
+    @media (max-width: 767.98px) {
+      margin-left: -16px;
+      margin-right: -16px;
+      &::after {
+        content: '';
+        width: 16px;
+        height: 170px;
+        background-image: linear-gradient(
+          to left,
+          $add-background-color,
+          $main-color,
+          transparent 100%
+        );
+        position: absolute;
+        right: 0;
+        z-index: 100;
+      }
+      &::before {
+        content: '';
+        width: 16px;
+        height: 170px;
+        background-image: linear-gradient(
+          to right,
+          $add-background-color,
+          $main-color,
+          transparent 100%
+        );
+        position: absolute;
+        left: 0;
+        z-index: 100;
+      }
+    }
+
+    &-wrapper {
+      box-sizing: content-box;
+      width: 100%;
+      @media (max-width: 767.98px) {
+        padding-left: 16px;
+        padding-bottom: 48px;
+      }
+      @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 170px;
+        overflow-y: hidden;
+        padding-bottom: 16px;
+        transition: all 0.5s ease-in;
+      }
+      &--hidden {
+        @media (min-width: 768px) {
+          max-height: 100vh;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    &-slide {
+      display: flex;
+      gap: 8px;
+      width: 240px;
+    }
+  }
+  &__brands {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    width: 224px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: $add-background-color;
+    margin-top: 16px;
+    position: relative;
+    &-button {
+      height: 40px;
+      width: 40px;
+      border: 2px solid $button-color;
+      border-radius: 50%;
+      background-color: $add-background-color;
+      background-image: url('../img/dropdown2.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &__heading {
+    padding-top: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    min-height: 50px;
+    width: auto;
+    background-image: linear-gradient(
+      90deg,
+      $main-color 85%,
+      $add-background-color 93%,
+      $add-background-color 100%
+    );
+
+    @media (min-width: 768px) {
+      margin-right: -24px;
+    }
+  }
+
+  &__button-show-more {
+    border: none;
+    background: none;
+    display: flex;
+    z-index: 150;
+    width: 120px;
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      display: flex;
+      background-image: url('../img/icon.svg');
+      background-repeat: no-repeat;
+      background-position: 10px 3px;
+
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
+    &--clicked::before {
+      transform: rotate(180deg) translateY(7px);
+    }
+  }
+}
+
+.brand-list__swiper-pagination {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #5b5959;
+  width: 14px;
+  height: 14px;
+  &-active {
+    background-color: #7b7c80;
+  }
+}

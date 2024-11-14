@@ -1,0 +1,60 @@
+@use 'variables.scss' as *;
+ 
+ .action-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: $button-color;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:hover {
+      filter: saturate(190%);
+       transform: scale(1.2);
+    }
+    &--burger { 
+        background-image: url("../img/burger.svg");
+        }
+      
+    &--repair {
+       background-image: url("../img/repair.svg");
+      }
+    
+    &--checkstatus {
+     background-image: url("../img/checkstatus.svg");
+ }
+    &--call { 
+    background-image: url("../img/call.svg");
+    }
+  
+    &--message {
+   background-image: url("../img/chat.svg");
+  }
+
+    &--contacts {
+ background-image: url("../img/profile.svg");
+}
+        }
+         
+
+.modal-button, .order-button{
+  
+   background-color: $button-color;
+   font-family: inherit;
+   font-size: 12px;
+   font-weight: 600;
+   color: $text-btn-color;
+   text-align: start;
+   height: 32px;
+   min-width: 119px;
+   border: none;
+   border-radius: 16px;
+   &::after {
+      content: "";
+      width: 10px;
+      height: 13px;
+      background-image: url(../img/dropdown.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+  }
+}

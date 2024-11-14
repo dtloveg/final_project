@@ -1,0 +1,115 @@
+@use 'variables.scss' as *;
+body {
+    
+    font-family: "TTLakes"; 
+    font-weight: 400; 
+    font-size: 14px;
+    color: $main-text-color;
+    overflow-x: hidden;
+    
+}
+
+.container  {
+    
+    @media (min-width: 1440px) {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+    }
+}
+.main {
+    
+    background-color: $main-color;
+    border: 1px solid $add-color-border;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        position: relative;
+    
+    &__container {
+        @media (max-width: 767.98px) {
+        padding: 16px;
+        }
+        @media (min-width: 767.98px) {
+            padding: 0 24px;
+            }
+        @media (min-width: 1240px) {
+           
+            padding-top: 16px;
+            max-width: 1240px;
+            margin: 0 auto;
+            border: none;
+            }
+        
+        
+        
+                 
+    }
+
+     &__page-title {
+        
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        gap: 16px; 
+        
+        &::before {
+        content: "";
+        width: 4px;
+        height: 32px;
+        background-color: $add-color;
+        position: absolute;
+        border-radius: 0 50px 50px 0;
+        left: 0;
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        @media (min-width: 768px) {
+            padding-top: 24px;
+        }
+        
+
+    }
+
+    &__header-action-icons {
+        display: none;
+
+        @media (min-width: 1439.98px) {
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+}
+        
+        
+    &__header-action-icon {
+       
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        color: $main-text-color;
+        font-size: 16px;
+        font-weight: 500;
+        list-style-type: none;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle; 
+        &--repair {
+            background-image: url("../img/repair.svg");
+            margin-right: 24px;
+            margin-left: 8px;  
+
+        }
+        &--checkstatus {
+            background-image: url("../img/checkstatus.svg");
+            
+            margin-left: 8px;  
+
+        }
+
+}
+}

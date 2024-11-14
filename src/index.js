@@ -1,0 +1,6 @@
+import './styles/style.scss'
+// import '../node_modules/swiper/swiper-bundle.js'
+import './js/main.js'
+import './js/sliders.js'
+import './js/swiper-bundle.min.js'
+import Swiper from 'swiper/bundle'

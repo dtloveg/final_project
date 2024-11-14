@@ -1,0 +1,79 @@
+@use 'variables.scss' as *;
+
+
+  
+.header {
+    
+    &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    height: 87px;
+    background-color: $add-background-color;  
+    @media (min-width: 1440px)  {  
+        display: none;  
+    }
+}
+    &__left-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 767.98px) {
+        gap: 8px; 
+        margin-left: 16px;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 20px;
+        padding-left: 24px;
+    
+   
+    }
+    }
+    &__right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 767.98px) {
+        gap: 16px; 
+        margin-right: 16px;
+        
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 16px;
+        padding-right: 24px; 
+    }
+    }
+
+    &__divider {
+        width: 2px;
+        height: 32px;
+        background-color: $border-color;
+        border-radius: 1px;
+        
+        &--mobile-hidden {
+            display: none;
+        @media (min-width: 768px) {
+            display: inline-block;
+        }       
+
+    }
+}
+    &__logo {    
+        border: none;
+        background: none; 
+        margin-right:auto;
+    }
+
+    &__extra-actions--mobile-hidden {
+        display: none;
+        @media (min-width: 768px) and (max-width: 1439.98px) {
+            display: flex;
+            gap: 16px;
+        }
+        
+    }
+}
+

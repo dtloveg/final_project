@@ -1,0 +1,99 @@
+@use 'variables.scss' as *;
+.servises_table {
+  display: flex;
+  flex-wrap: wrap;
+  color: $main-text-color;
+  background-color: $add-background-color;
+  border-radius: 6px;
+
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 32px);
+      height: 1px;
+      bottom: 0;
+      left: 16px;
+      background-color: rgb(234, 234, 234);
+    }
+  }
+  &__column {
+    padding: 10px;
+    border: 1px solid $border-color;
+    &--1 {
+      flex-basis: 50%;
+      padding-left: 16px;
+    }
+    &--2 {
+      flex-basis: 10%;
+    }
+    &--3 {
+      flex-basis: 14%;
+    }
+    &--4 {
+      width: 147px;
+    }
+  }
+  &__button-order {
+    padding-left: 12px;
+    flex-basis: 15%;
+    margin-right: 16px;
+    flex-shrink: 1;
+    max-width: 119px;
+    &::after {
+      right: 30px;
+      bottom: 25px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $main-color;
+    border-radius: 6px;
+
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+
+    &-row {
+      display: flex;
+      width: 100%;
+      height: 48px;
+      border-bottom: 1px solid $border-color;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 10px;
+    }
+
+    &-column {
+      flex-basis: 20%;
+      padding: 10px;
+
+      &--1 {
+        flex-basis: 50%;
+        padding-left: 16px;
+      }
+      &--2 {
+        flex-basis: 10%;
+      }
+      &--3 {
+        flex-basis: 14%;
+      }
+      &--4 {
+        width: 147px;
+      }
+    }
+  }
+}
