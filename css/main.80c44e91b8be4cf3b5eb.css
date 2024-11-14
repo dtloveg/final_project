@@ -960,7 +960,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 767.98px) {
   .about-company__description {
-    max-height: 160px;
+    max-height: 155px;
   }
 }
 @media (min-width: 1440px) {
@@ -1201,6 +1201,7 @@ button.swiper-pagination-bullet {
 }
 .action-button--burger {
   background-image: url(../src/img/burger.f845ea3a3d97b75c635a.svg);
+  z-index: 100;
 }
 .action-button--repair {
   background-image: url(../src/img/repair.d05f26a972ab489ececb.svg);
@@ -1211,14 +1212,15 @@ button.swiper-pagination-bullet {
 .action-button--call {
   background-image: url(../src/img/call.93310c35f758ef0c804c.svg);
 }
-.action-button--message {
-  background-image: url(../src/img/chat.f6fbb2847919546d1898.svg);
-}
 .action-button--contacts {
   background-image: url(../src/img/profile.03b69845b6d39bc1d91a.svg);
 }
+.action-button--chat {
+  background-image: url(../src/img/chat.f6fbb2847919546d1898.svg);
+}
 
-.modal-button, .order-button {
+.modal-button,
+.order-button {
   background-color: #FF3E79;
   font-family: inherit;
   font-size: 12px;
@@ -1230,7 +1232,8 @@ button.swiper-pagination-bullet {
   border: none;
   border-radius: 16px;
 }
-.modal-button::after, .order-button::after {
+.modal-button::after,
+.order-button::after {
   content: "";
   width: 10px;
   height: 13px;
@@ -1257,7 +1260,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1439.98px) {
   .footer {
-    grid-column: 2;
+    grid-column: 3;
     padding: 0 24px;
   }
 }
@@ -1646,13 +1649,13 @@ body {
   margin-left: 8px;
 }
 
-.modal-feedback {
+.modal-feedback__container {
   display: none;
 }
-.modal-feedback--opened {
+.modal-feedback__container--opened {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  row-gap: 16px;
   position: fixed;
   top: 0;
   right: 0;
@@ -1662,13 +1665,15 @@ body {
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 }
 @media (max-width: 767.98px) {
-  .modal-feedback--opened {
+  .modal-feedback__container--opened {
     width: 320px;
+    padding: 0 16px;
   }
 }
 @media (min-width: 768px) {
-  .modal-feedback--opened {
+  .modal-feedback__container--opened {
     width: 440px;
+    padding: 0 32px;
     border-left: 1px solid #41F6D7;
   }
 }
@@ -1692,7 +1697,6 @@ body {
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
-  padding-left: 32px;
 }
 .modal-feedback__title::before {
   content: "";
@@ -1712,13 +1716,11 @@ body {
 }
 @media (max-width: 767.98px) {
   .modal-feedback__input-field {
-    margin: 0 16px;
     width: 288px;
   }
 }
 @media (min-width: 768px) {
   .modal-feedback__input-field {
-    margin: 0 32px;
     width: 376px;
   }
 }
@@ -1731,13 +1733,11 @@ body {
 }
 @media (max-width: 767.98px) {
   .modal-feedback__message {
-    margin: 0 16px;
     width: 288px;
   }
 }
 @media (min-width: 768px) {
   .modal-feedback__message {
-    margin: 0 32px;
     width: 376px;
   }
 }
@@ -1774,32 +1774,23 @@ body {
 }
 .modal-feedback__blur--open {
   opacity: 0.92;
+  z-index: 200;
 }
 
 .NDA {
   font-weight: 500;
 }
-@media (max-width: 767.98px) {
-  .NDA {
-    margin: 0 16px;
-  }
-}
-@media (min-width: 768px) {
-  .NDA {
-    margin: 0 32px;
-  }
-}
 .NDA a {
   color: #FF3E79;
 }
 
-.modal-call {
+.modal-call__container {
   display: none;
 }
-.modal-call--opened {
+.modal-call__container--opened {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  row-gap: 16px;
   position: fixed;
   top: 0;
   right: 0;
@@ -1809,13 +1800,15 @@ body {
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
 }
 @media (max-width: 767.98px) {
-  .modal-call--opened {
+  .modal-call__container--opened {
     width: 320px;
+    padding: 0 16px;
   }
 }
 @media (min-width: 768px) {
-  .modal-call--opened {
+  .modal-call__container--opened {
     width: 440px;
+    padding: 0 32px;
     border-left: 1px solid #41F6D7;
   }
 }
@@ -1839,7 +1832,6 @@ body {
   font-size: 24px;
   font-weight: 700;
   margin-top: 40px;
-  padding-left: 32px;
 }
 .modal-call__title::before {
   content: "";
@@ -1858,13 +1850,11 @@ body {
 }
 @media (max-width: 767.98px) {
   .modal-call__input-field {
-    margin: 0 16px;
     width: 288px;
   }
 }
 @media (min-width: 768px) {
   .modal-call__input-field {
-    margin: 0 32px;
     width: 376px;
   }
 }
@@ -1882,7 +1872,6 @@ body {
 }
 @media (min-width: 768px) {
   .modal-call__message {
-    margin: 0 32px;
     width: 376px;
   }
 }
@@ -1915,10 +1904,11 @@ body {
   height: 100%;
   background-color: #ffffff;
   opacity: 0;
-  z-index: -3;
+  z-index: -1;
 }
 .modal-call__blur--open {
   opacity: 0.92;
+  z-index: 200;
 }
 
 .price-list {
@@ -2071,31 +2061,38 @@ body {
 }
 
 .mobile-navigation {
-  position: fixed;
+  grid-row: 1;
+}
+.mobile-navigation__container {
   display: flex;
   flex-direction: column;
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 320px;
   height: 100%;
+  top: 0;
+  left: 0;
   background-color: #ffffff;
   font-weight: 500;
   padding-left: 24px;
   row-gap: 46px;
   overflow-y: auto;
+  transition: left 0.45s ease-in-out;
 }
 @media (max-width: 1439.98px) {
-  .mobile-navigation {
+  .mobile-navigation__container {
     display: none;
   }
 }
-@media (min-width: 1440px) {
-  .mobile-navigation {
-    left: auto;
+@media (min-width: 1439.98px) {
+  .mobile-navigation__container {
+    position: sticky;
+    max-height: 100vh;
+    left: 0;
+    top: 0;
   }
 }
 @media (max-width: 1439.98px) {
-  .mobile-navigation--opened {
+  .mobile-navigation__container--opened {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -2175,15 +2172,6 @@ body {
   width: 196px;
   gap: 16px;
 }
-.mobile-navigation__button--call {
-  background-image: url(../src/img/call.93310c35f758ef0c804c.svg);
-}
-.mobile-navigation__button--chat {
-  background-image: url(../src/img/chat.f6fbb2847919546d1898.svg);
-}
-.mobile-navigation__button--profile {
-  background-image: url(../src/img/profile.03b69845b6d39bc1d91a.svg);
-}
 .mobile-navigation__contacts {
   display: block;
   margin-top: 16px;
@@ -2225,6 +2213,7 @@ body {
 }
 .mobile-navigation__blur--open {
   opacity: 0.92;
+  z-index: 100;
 }
 
 .servises_table {
@@ -2396,4 +2385,4 @@ body {
   background-color: #ffffff;
 }
 
-/*# sourceMappingURL=main.ea64ec56ca0fd77603ba.css.map*/
+/*# sourceMappingURL=main.80c44e91b8be4cf3b5eb.css.map*/

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Сервисный центр CPS</title>
-  <script defer="defer" src="main.18a9efadfb915aae5735.js"></script><link href="css/main.ea64ec56ca0fd77603ba.css" rel="stylesheet"></head>
+  <script defer="defer" src="main.def51a7023858288b3ff.js"></script><link href="css/main.80c44e91b8be4cf3b5eb.css" rel="stylesheet"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -20,7 +20,7 @@
           <div class="header__right-container">
             <div class="header__extra-actions header__extra-actions--mobile-hidden">
               <button class="action-button action-button--call"></button>
-              <button class="action-button action-button--message"></button>
+              <button class="action-button action-button--chat"></button>
               <button class="action-button action-button--contacts"></button>
             </div>
             <div class="header__divider"></div>
@@ -31,40 +31,42 @@
       </header>
       <aside class="mobile-navigation">
         <div class="mobile-navigation__blur"></div>
-        <div class="mobile-navigation__header">
-          <button class="action-button mobile-navigation__header-button--close"></button>
-          <img class="mobile-navigation__header--logo" src="src/img/group.e91c99dde47d923e398f.svg" alt="Логотип компании CPS" width="97" height="51">
-          <button class="action-button mobile-navigation__header-button--search"></button>
-        </div>
-
-        <nav class="mobile-navigation__menu">
-          <ul class="mobile-navigation__list">
-            <li><a class="mobile-navigation__link" href="#!">Ремонт техники</a></li>
-            <li><a class="mobile-navigation__link mobile-navigation__link--active" href="#!">Услуги и сервисы</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Корпоративным клиентам</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Продавцам техники</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Партнерам</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Производителям</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Наши сервисные центры</a></li>
-            <li><a class="mobile-navigation__link" href="#!">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <div class="mobile-navigation__footer">
-          <div class="mobile-navigation__buttons">
-            <button class="action-button mobile-navigation__button--call"></button>
-            <button class="action-button mobile-navigation__button--chat"></button>
-            <button class="action-button mobile-navigation__button--profile"></button>
-          </div>
-          <div class="mobile-navigation__contacts">
-            <address class="mobile-navigation__contacts--email">mail@cps.com</address>
-            <address class="mobile-navigation__contacts--number">8 800 890 8990</address>
+        <div class="mobile-navigation__container">
+          <div class="mobile-navigation__header">
+            <button class="action-button mobile-navigation__header-button--close"></button>
+            <img class="mobile-navigation__header--logo" src="src/img/group.e91c99dde47d923e398f.svg" alt="Логотип компании CPS" width="97" height="51">
+            <button class="action-button mobile-navigation__header-button--search"></button>
           </div>
 
-          <div class="mobile-navigation__languages">
-            <a class="mobile-navigation__language mobile-navigation__language--ru mobile-navigation__language--active" href="#!">RU</a>
-            <a class="mobile-navigation__language mobile-navigation__language--en" href="#!">EN</a>
-            <a class="mobile-navigation__language mobile-navigation__language--cn" href="#!">CN</a>
+          <nav class="mobile-navigation__menu">
+            <ul class="mobile-navigation__list">
+              <li><a class="mobile-navigation__link" href="#!">Ремонт техники</a></li>
+              <li><a class="mobile-navigation__link mobile-navigation__link--active" href="#!">Услуги и сервисы</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Корпоративным клиентам</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Продавцам техники</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Партнерам</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Производителям</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Наши сервисные центры</a></li>
+              <li><a class="mobile-navigation__link" href="#!">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="mobile-navigation__footer">
+            <div class="mobile-navigation__buttons">
+              <button class="action-button action-button--call"></button>
+              <button class="action-button action-button--chat"></button>
+              <button class="action-button action-button--contacts"></button>
+            </div>
+            <div class="mobile-navigation__contacts">
+              <address class="mobile-navigation__contacts--email">mail@cps.com</address>
+              <address class="mobile-navigation__contacts--number">8 800 890 8990</address>
+            </div>
+
+            <div class="mobile-navigation__languages">
+              <a class="mobile-navigation__language mobile-navigation__language--ru mobile-navigation__language--active" href="#!">RU</a>
+              <a class="mobile-navigation__language mobile-navigation__language--en" href="#!">EN</a>
+              <a class="mobile-navigation__language mobile-navigation__language--cn" href="#!">CN</a>
+            </div>
           </div>
         </div>
       </aside>
@@ -111,37 +113,6 @@
               <img class="about-company__company-signboard" src="src/img/MG_3223.b4908f9f6466908cade5.jpg" alt="Логотип компании и часы работы(не особо видно)">
             </div>
           </article>
-
-          <div class="modal-feedback">
-            <div class="modal-feedback__blur"></div>
-            <button class="action-button modal-feedback__button-close"></button>
-
-            <h2 class="modal-feedback__title">Обратная связь</h2>
-            <input class="modal-feedback__input-field" type="text" name="username" placeholder="Имя" required>
-            <input class="modal-feedback__input-field" type="number" name="number" placeholder="Телефон" required>
-            <input class="modal-feedback__input-field" type="email" name="email" placeholder="Электронная почта" required>
-            <textarea class="modal-feedback__message" placeholder="Сообщение"></textarea>
-            <p class="NDA">
-              Нажимая “отправить”, вы даете согласие на
-              <a href="#!">обработку персональных данных</a> и соглашаетесь с
-              нашей <a href="#!">политикой конфиденциальности</a>
-            </p>
-            <button class="modal-button modal-feedback__button-send">ОТПРАВИТЬ</button>
-          </div>
-
-          <div class="modal-call">
-            <div class="modal-call__blur"></div>
-            <button class="action-button modal-call__button-close"></button>
-
-            <h2 class="modal-call__title">Заказать звонок</h2>
-            <input class="modal-call__input-field" type="number" name="number" placeholder="Телефон" required>
-            <p class="NDA">
-              Нажимая “отправить”, вы даете согласие на
-              <a href="#!">обработку персональных данных</a> и соглашаетесь с
-              нашей <a href="#!">политикой конфиденциальности</a>
-            </p>
-            <button class="modal-button modal-call__button-send">ОТПРАВИТЬ</button>
-          </div>
 
           <section class="brand-list">
             <h2 class="brand-list__heading">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
@@ -420,6 +391,39 @@
           офертой
         </span>
       </footer>
+    </div>
+    <div class="modal-feedback">
+      <div class="modal-feedback__blur"></div>
+
+      <div class="modal-feedback__container">
+        <button class="action-button modal-feedback__button-close"></button>
+        <h2 class="modal-feedback__title">Обратная связь</h2>
+        <input class="modal-feedback__input-field" type="text" name="username" placeholder="Имя" required>
+        <input class="modal-feedback__input-field" type="number" name="number" placeholder="Телефон" required>
+        <input class="modal-feedback__input-field" type="email" name="email" placeholder="Электронная почта" required>
+        <textarea class="modal-feedback__message" placeholder="Сообщение"></textarea>
+        <p class="NDA">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#!">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="#!">политикой конфиденциальности</a>
+        </p>
+        <button class="modal-button modal-feedback__button-send">ОТПРАВИТЬ</button>
+      </div>
+    </div>
+    <div class="modal-call">
+      <div class="modal-call__blur"></div>
+
+      <div class="modal-call__container">
+        <button class="action-button modal-call__button-close"></button>
+        <h2 class="modal-call__title">Заказать звонок</h2>
+        <input class="modal-call__input-field" type="number" name="number" placeholder="Телефон" required>
+        <p class="NDA">
+          Нажимая “отправить”, вы даете согласие на
+          <a href="#!">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="#!">политикой конфиденциальности</a>
+        </p>
+        <button class="modal-button modal-call__button-send">ОТПРАВИТЬ</button>
+      </div>
     </div>
   </body>
 </html>
