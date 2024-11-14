@@ -1,27 +1,32 @@
 @use 'variables.scss' as *;
 
 .modal-feedback {
-  display: none;
-  &--opened {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: $add-background-color;
-    z-index: 200;
-    box-shadow:
-      16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  &__container {
+    display: none;
+    &--opened {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
 
-    @media (max-width: 767.98px) {
-      width: 320px;
-    }
-    @media (min-width: 768px) {
-      width: 440px;
-      border-left: 1px solid $add-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: $add-background-color;
+      z-index: 200;
+      box-shadow:
+        16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+        -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+      @media (max-width: 767.98px) {
+        width: 320px;
+        padding: 0 16px;
+      }
+      @media (min-width: 768px) {
+        width: 440px;
+        padding: 0 32px;
+        border-left: 1px solid $add-color;
+      }
     }
   }
   &__button-close {
@@ -40,7 +45,6 @@
     font-size: 24px;
     font-weight: 700;
     margin-top: 40px;
-    padding-left: 32px;
 
     &::before {
       content: '';
@@ -60,11 +64,9 @@
     padding: 0 16px;
 
     @media (max-width: 767.98px) {
-      margin: 0 16px;
       width: 288px;
     }
     @media (min-width: 768px) {
-      margin: 0 32px;
       width: 376px;
     }
   }
@@ -76,11 +78,9 @@
     padding: 16px 16px 0 16px;
 
     @media (max-width: 767.98px) {
-      margin: 0 16px;
       width: 288px;
     }
     @media (min-width: 768px) {
-      margin: 0 32px;
       width: 376px;
     }
   }
@@ -115,45 +115,44 @@
 
     &--open {
       opacity: 0.92;
+      z-index: 200;
     }
   }
 }
 .NDA {
   font-weight: 500;
-  @media (max-width: 767.98px) {
-    margin: 0 16px;
-  }
-  @media (min-width: 768px) {
-    margin: 0 32px;
-  }
-
   a {
     color: $text-nda-color;
   }
 }
 
 .modal-call {
-  display: none;
-  &--opened {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: $add-background-color;
-    z-index: 200;
-    box-shadow:
-      16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  &__container {
+    display: none;
+    &--opened {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
 
-    @media (max-width: 767.98px) {
-      width: 320px;
-    }
-    @media (min-width: 768px) {
-      width: 440px;
-      border-left: 1px solid $add-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: $add-background-color;
+      z-index: 200;
+      box-shadow:
+        16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+        -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+
+      @media (max-width: 767.98px) {
+        width: 320px;
+        padding: 0 16px;
+      }
+      @media (min-width: 768px) {
+        width: 440px;
+        padding: 0 32px;
+        border-left: 1px solid $add-color;
+      }
     }
   }
   &__button-close {
@@ -173,7 +172,6 @@
     font-size: 24px;
     font-weight: 700;
     margin-top: 40px;
-    padding-left: 32px;
 
     &::before {
       content: '';
@@ -191,11 +189,9 @@
     height: 48px;
     padding: 0 16px;
     @media (max-width: 767.98px) {
-      margin: 0 16px;
       width: 288px;
     }
     @media (min-width: 768px) {
-      margin: 0 32px;
       width: 376px;
     }
   }
@@ -209,7 +205,6 @@
       width: 288px;
     }
     @media (min-width: 768px) {
-      margin: 0 32px;
       width: 376px;
     }
   }
@@ -240,10 +235,11 @@
     height: 100%;
     background-color: $add-background-color;
     opacity: 0;
-    z-index: -3;
+    z-index: -1;
 
     &--open {
       opacity: 0.92;
+      z-index: 200;
     }
   }
 }

@@ -1,165 +1,162 @@
 @use 'variables.scss' as *;
 
-  .mobile-navigation {
-    position: fixed;
+.mobile-navigation {
+  grid-row: 1;
+  &__container {
     display: flex;
     flex-direction: column;
-    top: 0;
-    left: 0;
+    position: fixed;
     width: 320px;
     height: 100%;
+    top: 0;
+    left: 0;
     background-color: $add-background-color;
     font-weight: 500;
     padding-left: 24px;
     row-gap: 46px;
     overflow-y: auto;
+    transition: left 0.45s ease-in-out;
     @media (max-width: 1439.98px) {
-        
-        display: none;
+      display: none;
     }
-    @media (min-width: 1440px) {
-        left: auto;
+    @media (min-width: 1439.98px) {
+      position: sticky;
+      max-height: 100vh;
+      left: 0;
+      top: 0;
     }
     &--opened {
-        @media (max-width: 1439.98px) {
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            width: 320px;
-            height: 100%;
-            background-color: $add-background-color;
-            padding-left: 26px;
-            row-gap: 46px;
-            overflow-y: auto;
-            z-index: 200;
-            box-shadow: 
-            16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-            -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-    }
-    
-}
-    &__header {
-        margin-top: 17px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
-    &__header-button--close {
-        background-image: url("../img/icon_x.svg");
-        @media (min-width: 1440px) {
-            display: none;
-        }
-    }
-    &__header-button--search {
-        background-image: url("../img/icon_loop.svg");
-        margin-left:auto;
-        margin-right: 42px;
-    }
-
-    &__menu {
-        display: flex;
-        margin-bottom: auto;
-    }
-
-    &__list {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        row-gap: 24px;
-    }
-    &__link {
-        color: inherit;
-        display: inline-flex;
-        align-items: center;
-        text-decoration: none;
-        font-size: 16px;
-        min-height: 32px;
-        transition: transform 0.3s ease;
-        &--active {
-            position: relative;
-            color: $text-add-color;
-            &::before {
-                content: "";
-                width: 4px;
-                height: 32px;
-                background-color: $add-color;
-                position: absolute;
-                border-radius: 0 50px 50px 0;
-                left: -24px;
-            }
-        }
-        &:hover:not(.mobile-navigation__link--active) {
-            transform: scale(1.05);
-            color: black;
-        }
-    }
-
-    &__footer {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__buttons {
-        display: flex;
-        width: 196px;
-        gap: 16px;
-    }
-
-    &__button--call {
-        background-image: url("../img/call.svg");
-    }
-    &__button--chat {
-        background-image: url("../img/chat.svg");
-    }
-    &__button--profile {
-        background-image: url("../img/profile.svg");
-    }
-    &__contacts {
-        display: block;
-        margin-top: 16px;
-        &--email, &--number {
-            font-style:  normal;
-            padding: 8px 0;
-        }
-        &--number {
-            font-size: 24px;
-            font-weight: bold;
-            color: $main-text-color;
-        }
-    }
-        &__languages {
-            display: flex;
-            list-style-type: none;
-            margin-top: 40px;
-        }
-
-        &__language {
-            padding: 0 7px;
-            text-decoration: none;
-            color: inherit;
-            &:first-child {
-                padding-left: 0;
-            }
-            &--active {
-                color: $text-add-color;
-        }
-    
-}
-    &__blur {
+      @media (max-width: 1439.98px) {
         position: fixed;
+        display: flex;
+        flex-direction: column;
         top: 0;
-        left:0;
-        width: 100%;
+        left: 0;
+        width: 320px;
         height: 100%;
         background-color: $add-background-color;
-        opacity: 0;
-        z-index: -1;
-        
-        &--open {
-            opacity: 0.92;        
-        }
-     }
+        padding-left: 26px;
+        row-gap: 46px;
+        overflow-y: auto;
+        z-index: 200;
+        box-shadow:
+          16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+          -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+      }
+    }
   }
 
+  &__header {
+    margin-top: 17px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__header-button--close {
+    background-image: url('../img/icon_x.svg');
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+  &__header-button--search {
+    background-image: url('../img/icon_loop.svg');
+    margin-left: auto;
+    margin-right: 42px;
+  }
+
+  &__menu {
+    display: flex;
+    margin-bottom: auto;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  &__link {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    min-height: 32px;
+    transition: transform 0.3s ease;
+    &--active {
+      position: relative;
+      color: $text-add-color;
+      &::before {
+        content: '';
+        width: 4px;
+        height: 32px;
+        background-color: $add-color;
+        position: absolute;
+        border-radius: 0 50px 50px 0;
+        left: -24px;
+      }
+    }
+    &:hover:not(.mobile-navigation__link--active) {
+      transform: scale(1.05);
+      color: black;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 196px;
+    gap: 16px;
+  }
+
+  &__contacts {
+    display: block;
+    margin-top: 16px;
+    &--email,
+    &--number {
+      font-style: normal;
+      padding: 8px 0;
+    }
+    &--number {
+      font-size: 24px;
+      font-weight: bold;
+      color: $main-text-color;
+    }
+  }
+  &__languages {
+    display: flex;
+    list-style-type: none;
+    margin-top: 40px;
+  }
+
+  &__language {
+    padding: 0 7px;
+    text-decoration: none;
+    color: inherit;
+    &:first-child {
+      padding-left: 0;
+    }
+    &--active {
+      color: $text-add-color;
+    }
+  }
+  &__blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $add-background-color;
+    opacity: 0;
+    z-index: -1;
+
+    &--open {
+      opacity: 0.92;
+      z-index: 100;
+    }
+  }
+}
