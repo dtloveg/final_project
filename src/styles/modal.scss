@@ -32,8 +32,7 @@
   &__button-close {
     background-image: url('../img/icon_x.svg');
     @media (max-width: 767.98px) {
-      margin-left: 16px;
-      margin-top: 16px;
+      margin-top: 32px;
     }
     @media (min-width: 768px) {
       position: absolute;
@@ -44,7 +43,7 @@
   &__title {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 40px;
+    margin-top: 32px;
 
     &::before {
       content: '';
@@ -158,8 +157,7 @@
   &__button-close {
     background-image: url('../img/icon_x.svg');
     @media (max-width: 767.98px) {
-      margin-left: 16px;
-      margin-top: 16px;
+      margin-top: 32px;
     }
     @media (min-width: 768px) {
       position: absolute;
@@ -171,7 +169,7 @@
   &__title {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 40px;
+    margin-top: 32px;
 
     &::before {
       content: '';

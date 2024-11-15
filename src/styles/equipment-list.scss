@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   color: $text-add-color;
-  border-top: 1px solid $add-color-border;
+
   background-color: $main-color;
   margin-bottom: 8px;
 
@@ -119,6 +119,7 @@
     }
   }
   &__heading {
+    border-top: 1px solid $add-color-border;
     padding-top: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -130,6 +131,9 @@
       $add-background-color 93%,
       $add-background-color 100%
     );
+    @media (max-width: 767.98px) {
+      margin-right: -16px;
+    }
     @media (min-width: 768px) {
       margin-right: -24px;
     }
