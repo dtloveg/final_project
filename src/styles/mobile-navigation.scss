@@ -30,6 +30,8 @@
         position: fixed;
         display: flex;
         flex-direction: column;
+        animation: openMobNav 0.45s ease-in-out forwards;
+
         top: 0;
         left: 0;
         width: 320px;
@@ -158,5 +160,16 @@
       opacity: 0.92;
       z-index: 100;
     }
+  }
+}
+
+@keyframes openMobNav {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
