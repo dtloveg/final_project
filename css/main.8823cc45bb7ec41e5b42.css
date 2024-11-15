@@ -1664,6 +1664,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  animation: openModal 0.45s ease-in-out forwards;
   position: fixed;
   top: 0;
   right: 0;
@@ -1799,6 +1800,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  animation: openModal 0.45s ease-in-out forwards;
   position: fixed;
   top: 0;
   right: 0;
@@ -1919,6 +1921,15 @@ body {
   z-index: 200;
 }
 
+@keyframes openModal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .price-list {
   display: flex;
   flex-direction: column;
@@ -2104,6 +2115,7 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
+    animation: openMobNav 0.45s ease-in-out forwards;
     top: 0;
     left: 0;
     width: 320px;
@@ -2224,6 +2236,15 @@ body {
   z-index: 100;
 }
 
+@keyframes openMobNav {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .servises_table {
   display: flex;
   flex-wrap: wrap;
@@ -2393,4 +2414,4 @@ body {
   background-color: #ffffff;
 }
 
-/*# sourceMappingURL=main.f5d8e41f660f8c282229.css.map*/
+/*# sourceMappingURL=main.8823cc45bb7ec41e5b42.css.map*/
