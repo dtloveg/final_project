@@ -42,8 +42,8 @@ openCall.forEach(function (btn) {
 });
 openFeedback.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    call.classList.add('modal-call__container--opened');
-    callBlur.classList.add('modal-call__blur--open');
+    feedback.classList.add('modal-feedback__container--opened');
+    feedbackBlur.classList.add('modal-feedback__blur--open');
   });
 });
 closeCall.addEventListener('click', function () {
@@ -15672,4 +15672,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.def51a7023858288b3ff.js.map
+//# sourceMappingURL=main.ab79c40978443fe4545a.js.map

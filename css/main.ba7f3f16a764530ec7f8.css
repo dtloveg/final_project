@@ -1147,6 +1147,9 @@ button.swiper-pagination-bullet {
   display: flex;
   z-index: 150;
   width: 120px;
+  font-family: "TTLakes";
+  font-weight: 500;
+  font-size: 16px;
 }
 @media (max-width: 767.98px) {
   .brand-list__button-show-more {
@@ -1438,6 +1441,9 @@ button.swiper-pagination-bullet {
 .equipment-list__button-show-more {
   border: none;
   background: none;
+  font-family: "TTLakes";
+  font-weight: 500;
+  font-size: 16px;
   display: flex;
   z-index: 150;
   width: 120px;
@@ -2385,4 +2391,4 @@ body {
   background-color: #ffffff;
 }
 
-/*# sourceMappingURL=main.80c44e91b8be4cf3b5eb.css.map*/
+/*# sourceMappingURL=main.ba7f3f16a764530ec7f8.css.map*/
