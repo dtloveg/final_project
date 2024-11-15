@@ -38,8 +38,8 @@ openCall.forEach(function (btn) {
 
 openFeedback.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    call.classList.add('modal-call__container--opened')
-    callBlur.classList.add('modal-call__blur--open')
+    feedback.classList.add('modal-feedback__container--opened')
+    feedbackBlur.classList.add('modal-feedback__blur--open')
   })
 })
 
